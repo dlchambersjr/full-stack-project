@@ -5,6 +5,7 @@ const express = require('express');
 // local middleware will load here
 const router = require('./routes.js');
 const notFound = require('./middleware/404.js');
+const error = require('./middleware/error.js');
 
 const app = express();
 
@@ -17,6 +18,7 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use(router);
 app.use(notFound);
+app.use(error);
 
 let server;
 
