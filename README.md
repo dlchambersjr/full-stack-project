@@ -1,4 +1,5 @@
-# Full Stack React Back End Server
+
+# Full Stack React Back End Server [![Build Status](https://travis-ci.org/dlchambersjr/full-stack-project.svg?branch=master)](https://travis-ci.org/dlchambersjr/full-stack-project)
 
 ### Author: David Chambers
 
