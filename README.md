@@ -1,40 +1,70 @@
-![CF](http://i.imgur.com/7v5ASc8.png) LAB
-=================================================
+# Full Stack React Back End Server
 
-## Project Name
-
-### Author: Student/Group Name
+### Author: David Chambers
 
 ### Links and Resources
-* [repo](http://xyz.com)
-* [deployed site](http://xyz.com)
+* [Full Stack Server](https://github.com/dlchambersjr/full-stack-project)
+* [deployed site](https://full-stack-back-end.herokuapp.com/)
 
 ### Modules
-#### `modulename.js`
+#### `index.js` - entry point for the server
+
+#### `server.js` - creates the necessary requirements and path for server traffic.
 ##### Exported Values and Methods
+Exports the server process to be used by index.js
 
-###### `foo(thing) -> string`
-Usage Notes or examples
+###### `app -> required functions of the server via express`
+Establishes the router, 404 and error handling, and express requirements.
 
-###### `bar(array) -> array`
-Usage Notes or examples
+###### `start(port) -> starts the express server on the supplied port`
+Send a message to the console that the server has been started.
+
+###### `stop() -> stops the express server`
+Send a message to the console that the server has been stopped.
+
+#### `routes.js` - handles all HTTP requests to the server.
+##### Exported Values and Methods
+Exports the HTTP method handlers for the server to use.
+
+###### `get('/') -> string`
+Simple proof of life response path
+
+###### `get('/content') -> JSON Data`
+Responds with a JSON file of 'content'
+
+#### `404.js` - handles route not found errors.
+##### Exported Values and Methods
+Renders a user friendly 404 error message with EJS
+
+#### `error.js` - handles internal server errors.
+##### Exported Values and Methods
+Renders a user friendly 500 error message with EJS
 
 ### Setup
 #### `.env` requirements
 * `PORT` - Port Number
-* `MONGODB_URI` - URL to the running mongo instance/db
 
 #### Running the app
 * `npm start`
-* Endpoint: `/foo/bar/`
-  * Returns a JSON object with abc in it.
-* Endpoint: `/bing/zing/`
-  * Returns a JSON object with xyz in it.
+* Endpoint: `/`
+  * Returns a 'Server Home'.
+* Endpoint: `/content`
+  * Returns a JSON object with content.
 
 #### Tests
-* How do you run tests?
-* What assertions were made?
-* What assertions need to be / should be made?
+* Tests are begin made with Jest
+
+##### `server.test.js` - 
+* Tested that the server could start.
+* Tested that the server could stop.
+
+##### `router.test.js`
+* Tested that the '/' route returned 'Server Home'.
+* Tested that the '/content' route returned a JSON file with 'content'.
+
+The following assertions need to be tested - There is confusion on how to return testable data when rendering EJS templates.
+1. The server handles bad routes with 404 and renders a custom EJS response.
+2. The server handles internal (500) errors and returns a custom EJS response.
 
 #### UML
 Link to an image of the UML for your application and response to events

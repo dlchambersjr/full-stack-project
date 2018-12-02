@@ -1,0 +1,16 @@
+body {
+  background-color:whitesmoke;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  align-items: center;
+}
+
+img {
+  display:block;
+  width: 25vw;
+ margin: 0px auto;
+}
+
+h1 {
+  font-size: 3vw;
+  text-align: center;
+}
