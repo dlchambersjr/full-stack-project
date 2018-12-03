@@ -1,7 +1,7 @@
 'use strict';
 
 const express = require('express');
-const cors = require('.cors');
+const cors = require('cors');
 
 // local middleware will load here
 const router = require('./routes.js');
