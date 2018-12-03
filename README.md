@@ -4,8 +4,12 @@
 ### Author: David Chambers
 
 ### Links and Resources
-* [Full Stack Server](https://github.com/dlchambersjr/full-stack-project)
-* [deployed site](https://full-stack-back-end.herokuapp.com/)
+* [REPO: Full Stack Server](https://github.com/dlchambersjr/full-stack-project)
+* [DEPLOYED: Server](https://full-stack-back-end.herokuapp.com/)
+* [REPO: React App](https://github.com/dlchambersjr/full-stack-project-react)
+* [REPO: README.MD](https://github.com/dlchambersjr/full-stack-project-react/blob/master/README.md)
+* [DEPLOYED: React App](http://dc-week7-fullstack-project.s3-website-us-west-2.amazonaws.com/)
+NOTE:  I attempted to upload with aws.yml twice with no success.  
 
 ### Modules
 #### `index.js` - entry point for the server
@@ -68,4 +72,5 @@ The following assertions need to be tested - There is confusion on how to return
 2. The server handles internal (500) errors and returns a custom EJS response.
 
 #### UML
-Link to an image of the UML for your application and response to events
+[SERVER UML](./uml-server.jpg)
+[REACT UML]('/uml-react.jpg)
